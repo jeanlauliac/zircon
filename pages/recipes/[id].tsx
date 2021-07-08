@@ -4,6 +4,7 @@ import Head from "next/head";
 import Date from "../../components/date";
 import utilStyles from "../../styles/utils.module.css";
 import { GetStaticProps, GetStaticPaths } from "next";
+import styles from "./[id].module.css";
 
 export default function Post({ postData }: { postData: RecipeData }) {
   console.log(postData);
@@ -18,16 +19,16 @@ export default function Post({ postData }: { postData: RecipeData }) {
           <Date dateString={postData.date} />
         </div>
 
-        <ul>
+        <table className={styles.ingredients}>
           {postData.ingredients.map((ingr) => (
-            <li>
-              <strong>
-                {ingr.quantity}&nbsp;{ingr.unit}
-              </strong>{" "}
-              {ingr.data.title}
-            </li>
+            <tr>
+              <td className={styles.quantity}>
+                <input type="text" value={`${ingr.quantity} ${ingr.unit}`} />
+              </td>{" "}
+              <td className={styles.name}>{ingr.data.title}</td>
+            </tr>
           ))}
-        </ul>
+        </table>
 
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>

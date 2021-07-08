@@ -1,0 +1,21 @@
+.ingredients {
+  /* list-style-type: none; */
+  /* padding: 0; */
+  padding: 1rem 0 0 0;
+}
+
+.ingredients td {
+  padding: 0;
+}
+
+.ingredients td.quantity input[type="text"] {
+  text-align: right;
+  font-weight: bold;
+  border: none;
+  font-size: 1rem;
+  width: 4rem;
+}
+
+.ingredients td.name {
+  padding: 0 0 0 0.5rem;
+}

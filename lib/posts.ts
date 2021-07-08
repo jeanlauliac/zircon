@@ -55,9 +55,9 @@ type Recipe = {
 
 type Ingredient = { title: string };
 const ingredientTypes = new Map<string, Ingredient>([
-  ["white_flour", { title: "White Flour" }],
-  ["gluten_free_flour", { title: "Gluten-free Flour" }],
-  ["xantham_gum", { title: "Xantham Gum" }],
+  ["white_flour", { title: "white flour" }],
+  ["gluten_free_flour", { title: "gluten-free flour" }],
+  ["xantham_gum", { title: "xantham gum" }],
 ]);
 
 type RecipeIngredient = { data: Ingredient; unit: string; quantity: number };
