@@ -14,8 +14,9 @@
   border: none;
   font-size: 1rem;
   width: 4rem;
+  padding: 0 0.2rem 0 0;
 }
 
 .ingredients td.name {
-  padding: 0 0 0 0.5rem;
+  padding: 0 0 0 0.2rem;
 }

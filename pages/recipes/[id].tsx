@@ -5,9 +5,18 @@ import Date from "../../components/date";
 import utilStyles from "../../styles/utils.module.css";
 import { GetStaticProps, GetStaticPaths } from "next";
 import styles from "./[id].module.css";
+import React, { useState } from "react";
+
+function QuantityInput({ quantity, unit }: { quantity: number; unit: string }) {
+  const [value, setValue] = useState(`${quantity} ${unit}`);
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(event.target.value);
+  };
+
+  return <input type="text" value={value} onChange={onChange} />;
+}
 
 export default function Post({ postData }: { postData: RecipeData }) {
-  console.log(postData);
   return (
     <Layout>
       <Head>
@@ -23,7 +32,7 @@ export default function Post({ postData }: { postData: RecipeData }) {
           {postData.ingredients.map((ingr) => (
             <tr>
               <td className={styles.quantity}>
-                <input type="text" value={`${ingr.quantity} ${ingr.unit}`} />
+                <QuantityInput quantity={ingr.quantity} unit={ingr.unit} />
               </td>{" "}
               <td className={styles.name}>{ingr.data.title}</td>
             </tr>
