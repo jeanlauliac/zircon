@@ -69,6 +69,10 @@ export type RecipeData = {
   date: string;
 };
 
+export function parseQuantity(quantityStr: string): void {
+  quantityStr.match(/[0-9] ?[a-zA-Z]/);
+}
+
 export async function getPostData(id: string): Promise<RecipeData> {
   const fullPath = path.join(postsDirectory, `${id}.yaml`);
   const fileContents = fs.readFileSync(fullPath, "utf8");

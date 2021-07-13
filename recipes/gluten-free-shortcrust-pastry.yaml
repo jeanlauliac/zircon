@@ -1,8 +1,18 @@
 title: "Gluten-free shortcrust pastry"
 date: "2020-01-01"
-ingredients:
-  - { quantity: 220, unit: "g", item: "gluten_free_flour" }
-  - { quantity: 1, unit: "tsp", item: "xantham_gum" }
+ingredients: |
+  220 g gluten-free flour
+  1 tsp xantham gum
+  1/2 tsp fine salt
+  110 g unsalted butter
+  1 egg
+  2 tbsp cold water
+# - { quantity: 220, unit: "g", item: "gluten_free_flour" }
+# - { quantity: 1, unit: "tsp", item: "xantham_gum" }
+# - { quantity: 0.5, unit: "tsp", item: "fine_salt" }
+# - { quantity: 110, unit: "g", item: "unsalted_butter" }
+# - { quantity: 1, unit: "none", item: "egg" }
+# - { quantity: 2, unit: "tbsp", item: "cold_water" }
 method: |
   Next.js has two forms of pre-rendering: **Static Generation** and
   **Server-side Rendering**. The difference is in **when** it generates the HTML
